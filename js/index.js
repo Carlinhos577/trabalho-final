@@ -1,3 +1,25 @@
+const menuButton = document.querySelector('.menu-toggler');
+
+
+menuButton.addEventListener('click', () => {
+    const sidebar = document.querySelector('.menu');
+
+    const isInView = sidebar.classList.contains('in-view');
+    console.log(isInView);
+
+    if(isInView) {
+        sidebar.classList.remove('in-view');
+        document.querySelector('.menu-focus').classList.remove('in-view');
+    } else {
+        sidebar.classList.add('in-view');
+        document.querySelector('.menu-focus').classList.add('in-view');
+
+    }
+})
+
+
+
+// Carousel function
 setInterval(() => {
     const carouselImages = document.querySelectorAll('.carousel-image');
     let i = 0;

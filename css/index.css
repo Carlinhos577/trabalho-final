@@ -1,4 +1,5 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -15,12 +16,75 @@ main {
 }
 
 nav {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+}
+
+.menu {
+    width: 0;
+    height: 100vh;
+    transition: width .8s ease-in-out;
+    background-color: #222222;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+.menu-items div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu-focus {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    transition: width, background-color .8s ease-in-out;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-focus a {
+    display: none;
+}
+
+.menu-focus.in-view {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-focus.in-view a {
+    display: flex;
+    gap: .6rem;
+    text-decoration: none;
+    color: white;
+    padding-block: .95rem;
+    font-weight: bold;
+    margin-left: 1.625rem;
+}
+
+.menu.in-view {
+    width: 70vw;
+}
+
+.menu-title {
+    padding-right: 1.3rem;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .menu-toggler {
     width: 50px;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,11 +97,9 @@ nav {
 
 .content {
     width: 100%;
-    
 }
 
 .carousel {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,24 +128,6 @@ nav {
     justify-content: center;
 }
 
-.prev-image,
-.next-image {
-    position: absolute;
-    z-index: 2;
-    background: radial-gradient(rgb(42, 183, 96), rgb(68, 226, 19));
-    color: white;
-    padding: .625rem;
-    border-radius: 5px;
-}
-
-.prev-image {
-    left: .625rem;
-}
-
-.next-image {
-    right: .625rem;
-}
-
 header {
     padding-bottom: 1.5rem;
     text-align: center;
@@ -91,7 +135,7 @@ header {
     color: white;
 }
 
-header h2 {
+header h3 {
     background: rgb(3, 203, 89);
     padding-block: .825rem;
 }
