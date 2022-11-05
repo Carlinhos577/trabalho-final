@@ -10,6 +10,7 @@ footer .top-footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
 }
 
 footer .top-footer .blog-links {
@@ -35,10 +36,42 @@ footer .top-footer .blog-links a {
     padding: 0.5rem 0;
 }
 
-footer .copyright {
-    background-color: #333;
+footer .top-footer .socials .text-footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-footer .copyright p{
-    padding: 1rem 0;
+footer .top-footer .socials .text-footer p {
+    color: #fff;
+    font-size: 1rem;
 }
+
+footer .top-footer .socials .social-medias {
+    padding-top: 0.5rem;
+}
+
+footer .top-footer .socials .social-medias i {
+    font-size: 2.5rem;
+    color: #008037;
+    padding: 0.5rem 0.7rem 0 0.7rem;
+}
+
+footer .copyright {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+footer .copyright p {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .copyright p span {
+    color: #008037;
+    font-weight: 600;
+}
+
